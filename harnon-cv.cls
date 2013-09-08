@@ -13,7 +13,7 @@
 \LoadClass[a4paper, 8pt]{article}
 
 % margins
-\usepackage[top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
+\usepackage[top=0.8in,bottom=0.8in,left=0.8in,right=0.8in]{geometry}
 
 % turn off all page styling
 \pagestyle{plain}
@@ -119,9 +119,8 @@
 	
 	% draw recent history if there is any
 	\ifdefempty{\@recenthistory}{\relax}{%
-		\vspace{7mm}
+		\vspace{3mm}
 		\noindent\@recenthistory\\
-
 		% add a closing rule
 		\noindent\rule{\textwidth}{0.2mm}
 	}
