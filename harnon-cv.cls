@@ -110,8 +110,8 @@
 		\begin{flushleft}
 			\ifdefempty{\@yourname}{\relax}{\adddocumentheader{\@yourname}\\}
 			\ifdefempty{\@youremail}{\relax}{\small\faEnvelopeO\space\@youremail\\}
-			\ifdefempty{\@yourwebsite}{\relax}{\small\faHome\space\url{\@yourwebsite}\\}
 			\ifdefempty{\@yournumber}{\relax}{\small\faPhone\space\@yournumber\\}
+			\ifdefempty{\@yourwebsite}{\relax}{\small\faHome\space\url{\@yourwebsite}\\}
             \ifdefempty{\@yourgithub}{\relax}{\small\faGithub\space\url{\@yourgithub}\\}
             \ifdefempty{\@yourlinkedin}{\relax}{\small\faLinkedin\space\url{\@yourlinkedin}}
 		\end{flushleft}
