@@ -3,7 +3,7 @@ all: main
 main: BinLan.pdf
 
 BinLan.pdf: BinLan.tex
-	pdflatex BinLan.tex
+	xelatex BinLan.tex
 
 clean: 
 	rm -rf *.log

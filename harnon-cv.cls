@@ -25,12 +25,15 @@
 % framed package for borders
 \usepackage{framed}
 
+% font awesome package
+\usepackage{fontawesome}
+
 % define a custom timeline framed section based on leftbar
 \newenvironment{timelinebar}{%
 	\def\FrameCommand{\color{verylightgrey}\vrule width 1pt \hspace{8pt}\color{black}}%
 	\MakeFramed {\advance\hsize-\width \FrameRestore}}%
 {\endMakeFramed}
- 
+
 % package for tables
 \usepackage{tabularx}
 
@@ -42,6 +45,8 @@
 	\newcommand{\youraddress}[1]{\def \@youraddress{#1}}
 	\newcommand{\youremail}[1]{\def \@youremail{#1}}
 	\newcommand{\yourwebsite}[1]{\def \@yourwebsite{#1}}
+    \newcommand{\yourgithub}[1]{\def \@yourgithub{#1}}
+    \newcommand{\yourlinkedin}[1]{\def \@yourlinkedin{#1}}
 	\newcommand{\recenthistory}[1]{\def \@recenthistory{#1}}
 
 	\yourname{}
@@ -49,14 +54,16 @@
 	\youraddress{}
 	\youremail{}
 	\yourwebsite{}
+    \yourgithub{}
+    \yourlinkedin{}
 	\recenthistory{}
-	
+
 	% redefine the author command
 	\renewcommand{\author}[1]{\yourname{#1}}
 \makeatother
 
 % images - such as a headshot if desired
-\usepackage[pdftex]{graphicx}
+% \usepackage[pdftex]{graphicx}
 
 % colours
 \usepackage{xcolor}
@@ -79,7 +86,7 @@
 	% for section headers
 	\newenvironment{sectionheader}{\vspace{1.2cm} \color{darkgrey} \large \noindent}{\par\vspace{3mm}}
 	\newcommand{\addheadertext}[1]{\begin{sectionheader}#1\end{sectionheader}}
-	
+
 	% for sub headings
 	\newenvironment{subheader}{\color{darkgrey} \large}{\par}
 	\newcommand{\addsubheader}[1]{\begin{subheader}#1\end{subheader}}
@@ -102,21 +109,23 @@
 	\noindent\begin{minipage}{0.5\textwidth}
 		\begin{flushleft}
 			\ifdefempty{\@yourname}{\relax}{\adddocumentheader{\@yourname}\\}
-			\ifdefempty{\@youremail}{\relax}{\small\@youremail\\}
-			\ifdefempty{\@yourwebsite}{\relax}{\small\url{\@yourwebsite}\\}
-			\ifdefempty{\@yournumber}{\relax}{\small\@yournumber}
+			\ifdefempty{\@youremail}{\relax}{\small\faEnvelopeO\space\@youremail\\}
+			\ifdefempty{\@yourwebsite}{\relax}{\small\faHome\space\url{\@yourwebsite}\\}
+			\ifdefempty{\@yournumber}{\relax}{\small\faPhone\space\@yournumber\\}
+            \ifdefempty{\@yourgithub}{\relax}{\small\faGithub\space\url{\@yourgithub}\\}
+            \ifdefempty{\@yourlinkedin}{\relax}{\small\faLinkedin\space\url{\@yourlinkedin}}
 		\end{flushleft}
 	\end{minipage}
 	\noindent\begin{minipage}{0.5\textwidth}
 		\begin{flushright}
-			\ifdefempty{\@youraddress}{\relax}{\hfill\small\@youraddress}
+			\ifdefempty{\@youraddress}{\relax}{\hfill\small\faMapMarker\space\@youraddress}
 		\end{flushright}
 	\end{minipage}
-	
+
 	% add a closing rule
 	\vspace{0.5cm}
 	\noindent\rule{\textwidth}{0.2mm}
-	
+
 	% draw recent history if there is any
 	\ifdefempty{\@recenthistory}{\relax}{%
 		\vspace{3mm}
@@ -176,3 +185,5 @@
 
 % hyperref package for links etc
 \usepackage{hyperref}
+
+
