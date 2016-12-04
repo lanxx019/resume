@@ -26,6 +26,10 @@
 \usepackage{framed}
 
 % font awesome package
+\usepackage{fontspec}
+\defaultfontfeatures{
+    Path = /usr/local/texlive/2016/texmf-dist/fonts/opentype/public/fontawesome/
+}
 \usepackage{fontawesome}
 
 % define a custom timeline framed section based on leftbar
@@ -142,14 +146,14 @@
 
 	% start a timeline - fixes spacing before the timeline
 	\newcommand{\starttimeline}{\vspace{0.2cm}}
-	
+
 	% end a timeline - fix up spacing after a timeline
 	\newcommand{\stoptimeline}{\vspace{0.5cm}}
-	
+
 	% add a timeline bullet point
 	\newenvironment{timelinebullet}{\leftskip=12mm \parindent=-6mm $\bullet$ \hspace{2mm}}{\par\parindent=18pt}
 	\newcommand{\addtimelinebullet}[1]{\begin{timelinebullet}#1\end{timelinebullet}}
-	
+
 	% recent summary listing in the form of a timeline - takes 2 arguments
 	%   - First is the 'year' or date you want to apply
 	%   - Second is the comments against that date
