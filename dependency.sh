@@ -6,9 +6,8 @@ sudo tlmgr update --self
 sudo tlmgr install fontawesome
 sudo tlmgr install nopageno
 sudo tlmgr install framed
-sudo tlmgr install cantarell
+# sudo tlmgr install cantarell
 sudo tlmgr install slantsc
 sudo tlmgr install numprint
-# sudo tlmgr install cantarell
 sudo tlmgr install noto
 

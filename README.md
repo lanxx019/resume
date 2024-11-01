@@ -8,9 +8,12 @@ My Resume. Based on [harnon-cv](https://www.ctan.org/pkg/harnon-cv?lang=en).
   sudo tlmgr install fontawesome
   sudo tlmgr install nopageno
   sudo tlmgr install framed
-  sudo tlmgr install cantarell
+  # cantarell font. No longer used due to styling issues.
+  # sudo tlmgr install cantarell
   sudo tlmgr install slantsc
   sudo tlmgr install numprint
+  # noto font: https://ctan.org/pkg/noto
+  sudo tlmgr install noto
   ```
 
 ## Build
